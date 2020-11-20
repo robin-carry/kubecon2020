@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: ng-sample
+  name: ng-sample
+  namespace: sample
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ng-sample
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: ng-sample
+    spec:
+      containers:
+      - image: nginx:1.19.4
+        name: nginx
+        ports:
+        - containerPort: 80
+        resources: {}
+status: {}
