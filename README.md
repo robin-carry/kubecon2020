@@ -21,4 +21,12 @@ Go to [ingress-with-kind](./ingress-with-kind) for more details
 
 ## 5. Local ELK (Elastic, Logstash and Kibana) world
 
+TBD
+
 ## 6. Local Metrics with Kibana & Grafana
+
+TBD
+
+## 7. Other Miscellaneous Goodies
+
+TBD
