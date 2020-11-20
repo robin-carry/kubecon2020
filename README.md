@@ -3,30 +3,36 @@
 ## Abstract
 List of all the sessions/learning which were interesting. Idea of this page is to create some content to be read through every Friday based on need and ask. 
 
-## 1. Walkthrough the Kubernetes UIs
-
-TBD
-
-## 2. The building blocks of DX: K8S Evolution from CLI to GitOps
-
-TBD
-
-## 3. A Flight over the cloud native landscape
-
-TBD
-
-## 4. Local Ingress Tea Shop
+## 1. Local ingress-nginx with kind
 
 Go to [ingress-with-kind](./ingress-with-kind) for more details
 
-## 5. Local ELK (Elastic, Logstash and Kibana) world
+## 2. Local ELK (Elastic, Logstash and Kibana) 
 
 TBD
 
-## 6. Local Metrics with Kibana & Grafana
+## 3. Local Metrics with Kibana & Grafana
 
 TBD
 
-## 7. Other Miscellaneous Goodies
+## 4. Walkthrough the Kubernetes UIs
 
 TBD
+
+## 5. The building blocks of DX: K8S Evolution from CLI to GitOps
+
+TBD
+
+## 6. A Flight over the cloud native landscape
+
+TBD
+
+## 7. Security Keynote
+
+TBD
+
+## 8. Other Miscellaneous Goodies
+
+TBD
+
+ 
