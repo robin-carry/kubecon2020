@@ -34,25 +34,28 @@ Go to [logging-with-efk](./2-logging-with-ekf) for more details
 
 ## 3. Local Metrics with Prometheus & Grafana
 
-TBD
+Go to [the-metrics](./3-the-metrics) for more details
 
-## 4. Walkthrough the Kubernetes UIs
+## 4. Consul Service Mesh
 
-TBD
 
-## 5. The building blocks of DX: K8S Evolution from CLI to GitOps
-
-TBD
-
-## 6. A Flight over the cloud native landscape
+## 5. Walkthrough the Kubernetes UIs
 
 TBD
 
-## 7. Security Keynote
+## 6. The building blocks of DX: K8S Evolution from CLI to GitOps
 
 TBD
 
-## 8. Other Miscellaneous Goodies
+## 7. A Flight over the cloud native landscape
+
+TBD
+
+## 8. Security Keynote
+
+TBD
+
+## 9. Other Miscellaneous Goodies
 
 TBD
 

@@ -6,6 +6,8 @@ metadata:
     app: ng-sample
   name: ng-sample
   namespace: sample
+  annotations:
+    consul.hashicorp.com/connect-inject: "true"
 spec:
   replicas: 1
   selector:
