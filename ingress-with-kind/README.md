@@ -9,19 +9,6 @@ Do check-out the last section talking about `why a custom ingress controller`
 - Having basic understanding of what a container image is. 
 - Having basic knowledge of K8S and it is objects like pod, service (node-port, load-balancer etc), ingress
 
-## Installing Kind
-
-- Refer to [original documentation](https://kind.sigs.k8s.io/docs/user/quick-start/#installation)
-- Easy step for Mac users `brew install kind`
-
-### Starting Kind
-
-Clone this repo and run the command `./1-Starting-Kind/start-kind.sh`. This is different from the regular approach of `kind create cluster`. The reason is we are adding two things:
-- Annotation `ingress-ready=true`
-- Exposing extra port like 80 and 443 for ingress-controller to allow connection. 
-
-In the end, Ingress Controller locally will work as a NodePort to allow connections via the Ingress definition.
-
 ## Deploying Ingress-Controller 
 
 _**Issue with Docker Rate Limiting**: Due to the new changes since Nov'2, 2020, deploying of ingress can lead to failure of pods as the image couldn't be pull. Follow these steps to avoid such failure._ 
@@ -29,7 +16,7 @@ _**Issue with Docker Rate Limiting**: Due to the new changes since Nov'2, 2020, 
 - Download the image by running `docker pull jettech/kube-webhook-certgen:v1.3.0`
 - Upload the image to kind control plane by running `kind load docker-image jettech/kube-webhook-certgen:v1.3.0`
 
-> Run the command to deploy ingress-controller `kubectl apply -f ./2-Ingress-Controller/nginx-ingress.yaml`
+> Run the command to deploy ingress-controller `kubectl apply -f ./1-Ingress-Controller/nginx-ingress.yaml`
 
 **Check if the pods are running correctly**
 
@@ -52,7 +39,7 @@ _**Issue with Docker Rate Limiting**: Same issue as above, so we need to upload 
 - Download the image by running `docker pull nginx:1.19.4`
 - Upload the image to kind control plane by running `kind load docker-image nginx:1.19.4`
 
-Run the command `kubectl apply -f 3-Sample-App/.` to see the result as below
+Run the command `kubectl apply -f 2-Sample-App/.` to see the result as below
 
 ```
 % kubectl get all
@@ -71,7 +58,7 @@ replicaset.apps/ng-sample-68cc66d675   1         1         1       2m32s
 
 ## Deploying Ingress 
 
-Run the simple command `kubectl apply 4-Ingress/ingress.yaml`
+Run the simple command `kubectl apply 3-Ingress/ingress.yaml`
 
 ## Test the service is accessible
 
