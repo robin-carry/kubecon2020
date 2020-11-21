@@ -38,6 +38,7 @@ Go to [the-metrics](./3-the-metrics) for more details
 
 ## 4. Consul Service Mesh
 
+Go to [consul-service-mesh](./4-consul-service-mesh) for more details
 
 ## 5. Walkthrough the Kubernetes UIs
 
