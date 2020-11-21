@@ -40,7 +40,7 @@ elastic   green    1       7.9.2     Ready   6m54s
 
 `kubectl apply -f kibana.yaml`
 
-It takes some time for `Kibana` to come up, so use the `watch kubectl get kibana -n logging` command to check till state is green
+It takes some time for `Kibana` to come up, so use the `watch kubectl get kibana -n logging` command to check till state is green. Can take up to 2-3mins to start. 
 
 ```
 NAME     HEALTH   NODES   VERSION   AGE
@@ -63,14 +63,37 @@ kibana   green            7.9.2     118s
 - **First launch** there wouldn't be any index created
 - If you try to create index, it will say `Couldn't find any Elasticsearch data` because no `fluentd` or any other `log forwarder` is deployed yet. 
 
-### Deploying fluentd
+## Deploying fluentd
 
 `kubectl apply -f fluentd.yaml`
 
-..TBD -
+**Note** - Make sure that the pods have started and failure isn't happening due to docker limit issue. Check using 
+- `kubectl get pod -n logging | grep fluent`
+- `kubectl describe -n logging $(kubctl get pod -o name -o logging | grep fluent)`
 
-... install fluentd 
-... define index in kibana for elastic
-... see system logs showing up
-... deploy the sample-app from `ingress-with-kind` along 
-... search log using `label` on pod (need to see if ingress controller is required or not) 
+### Create index in Kibana
+
+The fluentd log forwarder will start sending now data to elasticsearch and kibana can display after creating a log indexer. 
+
+- Login back to https://localhost:5601/
+- Click on the `Hamburger icon` (left top) > `Discover` > `Create index pattern` > Enter `logstash-*` and use `@timestamp` option to complete the step
+- Go back to `Hamburger icon` > `Discover` to see now all the necessary **System Logs**
+
+(Refer the final result at the end of the page)
+
+## Final Result
+
+![Accessing system logs]
+(https://github.com/robin-carry/kubecon2020/blob/main/z-misc/logging-with-ekf.gif)
+
+## (Bonus) Checking Application logs
+
+Though there are number of ways to see different logs, this section explains how to see **Specific Pod** logs
+
+If you follow the steps in [ingress-with-kind](../ingress-with-kind/) steps to deploy the sample `ng-sample` service and do `curl http://localhost:80` you can see the `sample-app` logs by doing the following steps
+
+- Again click on the `hamburger icon` > `discover` to see the logs
+- In the search select  `kubernetes.labels.app ng-sample`
+
+![Image of ng-sample application log]
+(https://github.com/robin-carry/kubecon2020/blob/main/z-misc/logging-with-efk-bonus.png)
