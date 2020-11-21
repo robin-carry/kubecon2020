@@ -83,7 +83,7 @@ The fluentd log forwarder will start sending now data to elasticsearch and kiban
 
 ## Final Result
 
-![Accessing system logs](https://github.com/robin-carry/kubecon2020/blob/main/z-misc/logging-with-ekf.gif)
+![Accessing system logs](https://github.com/robin-carry/kubecon2020/blob/main/images/logging-with-ekf.gif)
 
 ## (Bonus) Checking Application logs
 
@@ -94,4 +94,4 @@ If you follow the steps in [ingress-with-kind](../ingress-with-kind/) steps to d
 - Again click on the `hamburger icon` > `discover` to see the logs
 - In the search select  `kubernetes.labels.app ng-sample`
 
-![Image of ng-sample application log](https://github.com/robin-carry/kubecon2020/blob/main/z-misc/logging-with-efk-bonus.png)
+![Image of ng-sample application log](https://github.com/robin-carry/kubecon2020/blob/main/images/logging-with-efk-bonus.png)

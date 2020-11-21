@@ -26,11 +26,11 @@ In the end, Ingress Controller locally will work as a NodePort to allow connecti
 
 ## 1. Local ingress-nginx with kind
 
-Go to [ingress-with-kind](./ingress-with-kind) for more details
+Go to [ingress-with-kind](./1-ingress-with-kind) for more details
 
 ## 2. Local ELK (Elastic, Logstash and Kibana) 
 
-Go to [logging-with-efk](./logging-with-ekf) for more details
+Go to [logging-with-efk](./2-logging-with-ekf) for more details
 
 ## 3. Local Metrics with Prometheus & Grafana
 
