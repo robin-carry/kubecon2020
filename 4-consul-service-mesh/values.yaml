@@ -1,0 +1,20 @@
+global:
+  name: consul
+server:
+  replicas: 1
+  bootstrapExpect: 1
+connectInject:
+  enabled: true
+controller:
+  enabled: true
+ingressGateways:
+  enabled: true
+  defaults:
+    affinity: ""
+  gateways:
+    - name: ingress-gateway
+      replicas: 1
+      service:
+        type: ClusterIP
+        ports:
+        - port: 80
