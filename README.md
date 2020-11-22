@@ -5,7 +5,7 @@ List of all the sessions/learning which were interesting. Idea of this page is t
 
 ## Why?
 
-Even though there is an existing documentation of all the steps for the [first three topics](https://github.com/ishustava/kubecon-2020-workshop), the reason why I am documenting is because I have realized with k8s and all the tech, no matter how much one experienced it by listening, watching and other people doing, unless one tries the stuff, there is hardly any understanding of this concepts when it comes to practical use. 
+Even though there is an existing documentation of all the steps for the [first four topics](https://github.com/ishustava/kubecon-2020-workshop), the reason why I am documenting is because I have realized with k8s and all the tech, no matter how much one experienced it by listening, watching and other people doing, unless one tries the stuff, there is hardly any understanding of this concepts when it comes to practical use. 
 
 And here is so much which gets cleared like why LoadBalancer vs NodePort, why something in k8s is used vs somewhere something else.   
 
